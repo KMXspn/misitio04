@@ -43,6 +43,7 @@ add(2,4)
 
 ## plty on 1 
 ```julia:ex109
+# hideall
 using PlotlyJS
 z =  [10     10.625  12.5  15.625  20
      5.625  6.25    8.125 11.25   15.625
@@ -54,9 +55,18 @@ data   = contour(; z=z)
 layout = Layout(; title="Basic Contour Plot")
 plt    = plot(data, layout)
 
-fdplotly(json(plt)) # hide
+fdplotly(json(plt)) 
 ```
 \textoutput{ex109}
+
+### plty fjson 
+```julia:ex1012
+# hideall
+using PlotlyJS
+fdplotly("./assets/plty.json") 
+```
+\fig{ex1012}
+
 
 ## plty on 2
 ```julia:ex209
@@ -65,11 +75,28 @@ p=plot(
      scatter(x=1:10, y=rand(10), mode="markers"),
      Layout(title="Responsive Plots")
      )
-savejson(p, joinpath(@OUTPUT, "plotlyex.json"))  # savejson is an alternative to savefig # hide
+savejson(p, joinpath(@OUTPUT, "plotlyex23.json"))  # savejson is an alternative to savefig # hide
 # PlotlyBase.json (also exported by PlotlyJS) often gives a smaller json compared to PlotlyJS.savefig # hide
 ```
 
-\fig{plotlyex.json}
+\fig{plotlyex23.json}
+
+![bee](/assets/plty.json)
+
+\fig{/assets/plty.json}
+
+## plty on 2
+```julia:ex210
+using PlotlyJS
+p=plot(
+     scatter(x=1:10, y=rand(10), mode="markers"),
+     Layout(title="Responsive Plots")
+     )
+savejson(p, joinpath(@OUTPUT, "plotlyex12.json"))  # savejson is an alternative to savefig # hide
+# PlotlyBase.json (also exported by PlotlyJS) often gives a smaller json compared to PlotlyJS.savefig # hide
+```
+
+\fig{plotlyex12}
 
 # Franklin syntax sandbox
 
