@@ -63,22 +63,19 @@ fdplotly(json(plt))
 ```julia:ex1012
 # hideall
 using PlotlyJS
-fdplotly("/assets/plty.json") 
+fdplotly(json(JSON.parsefile("./_assets/plty.json"));style = "width:800px;height:350px") 
 ```
 \fig{ex1012}
 \textoutput{ex1012}
 
-## plty from json
+## plty from json rrrrrr
 ```julia:ex1013
 # hideall
 using PlotlyJS
 using JSON
-akl = JSON.parsefile("./_assets/plty.json")
-
-
-fdplotly(JSON.json(akl))  
+fdplotly(JSON.json(JSON.parsefile("./_assets/plotlyex23.json"))
+;style = "width:800px;height:700px") 
 ```
-\fig{ex1013}
 \textoutput{ex1013}
 
 ## plty on 2
