@@ -1,0 +1,4 @@
+Sitemap: https://KMXspn.github.io/misitio04/sitemap.xml
+
+User-agent: *
+Disallow:
