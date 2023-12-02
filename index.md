@@ -63,10 +63,23 @@ fdplotly(json(plt))
 ```julia:ex1012
 # hideall
 using PlotlyJS
-fdplotly("./assets/plty.json") 
+fdplotly("/assets/plty.json") 
 ```
 \fig{ex1012}
+\textoutput{ex1012}
 
+## plty from json
+```julia:ex1013
+# hideall
+using PlotlyJS
+using JSON
+akl = JSON.parsefile("./_assets/plty.json")
+
+
+fdplotly(JSON.json(akl))  
+```
+\fig{ex1013}
+\textoutput{ex1013}
 
 ## plty on 2
 ```julia:ex209
