@@ -1,4 +1,4 @@
 # This file was generated, do not modify it. # hide
 # hideall
 using PlotlyJS
-fdplotly("./assets/plty.json")
+fdplotly("/assets/plty.json")
