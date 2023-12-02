@@ -15,11 +15,12 @@ println("Hola Julia")
 \show{./ex17}
 
 ```julia:./ex18
+# hideall
 function add(a,b)
      return a+b
 end
 ```
-\show{./ex18}
+
 ```julia:./ex19
 add(2,4)
 ```
@@ -68,7 +69,7 @@ savejson(p, joinpath(@OUTPUT, "plotlyex.json"))  # savejson is an alternative to
 # PlotlyBase.json (also exported by PlotlyJS) often gives a smaller json compared to PlotlyJS.savefig # hide
 ```
 
-\fig{plotlyex}
+\fig{plotlyex.json}
 
 # Franklin syntax sandbox
 
