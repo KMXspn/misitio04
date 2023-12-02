@@ -2,7 +2,5 @@
 # hideall
 using PlotlyJS
 using JSON
-akl = JSON.parsefile("./_assets/plty.json")
-
-
-fdplotly(JSON.json(akl))
+fdplotly(JSON.json(JSON.parsefile("./_assets/plotlyex23.json"))
+;style = "width:800px;height:700px")
