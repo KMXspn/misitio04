@@ -1,4 +1,5 @@
 # This file was generated, do not modify it. # hide
+# hideall
 using PlotlyJS
 z =  [10     10.625  12.5  15.625  20
      5.625  6.25    8.125 11.25   15.625
@@ -10,4 +11,4 @@ data   = contour(; z=z)
 layout = Layout(; title="Basic Contour Plot")
 plt    = plot(data, layout)
 
-fdplotly(json(plt)) # hide
+fdplotly(json(plt))

@@ -1,0 +1,10 @@
+~~~
+<div id="fdpwzd" style="width:600px;height:350px"></div>
+
+<script>
+	var fig = ./assets/plty.json;
+	graphDiv = document.getElementById('fdpwzd');
+	Plotly.newPlot(graphDiv, fig.data, fig.layout)
+</script>
+~~~
+
